@@ -41,15 +41,89 @@
 ![github4](https://user-images.githubusercontent.com/77142806/114081914-1f4e6c80-98e8-11eb-9cab-6e90e503b431.PNG)
 ------------
 # Front-End 작동 화면 미리 보기
+#### 상단 헤더 메뉴바 기능
+> 일반 사용자가 로그인 했을 경우와 어드민 관리자 계정으로 로그인 했을 경우 상단에 상품 등록, 수정, 삭제 메뉴를 추가함
+```
+<c:choose>
+					<c:when test="${empty sessionId}">
+						<li class="nav-item"><a class="nav-link" 
+						href="<c:url value="/members/loginMember.jsp" />">로그인</a></li>
+						<li class="nav-item"><a class="nav-link" 
+						href="<c:url value="/members/addMember.jsp" />">회원가입</a></li>
+					</c:when>
+					<c:otherwise>
+						<li style="padding-top: 7px; color: white"><%= sessionId %>[님]</li>
+						<li class="nav-item"><a class="nav-link" 
+						href="<c:url value="/members/logoutMember.jsp" />">로그아웃</a></li>
+						<li class="nav-item"><a class="nav-link" 
+						href="<c:url value="/members/updateMember.jsp" />">회원 수정</a></li>
+					</c:otherwise>
+				</c:choose>
+				
+				<c:choose>
+					<c:when test="${sessionId ne 'admin'}">
+						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/products.jsp" class="nav-link">상품 목록</a></li>
+					</c:when>
+					<c:otherwise>
+						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/products.jsp" class="nav-link">상품 목록</a></li>
+						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/addProduct.jsp" class="nav-link">상품 등록</a></li>
+						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/editProduct.jsp?edit=update" class="nav-link">상품 수정</a></li>
+						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/editProduct.jsp?edit=delete" class="nav-link">상품 삭제</a></li>
+					</c:otherwise>
+				</c:choose>
+				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/BoardListAction.do?pageNum=1">게시판</a></li>
+			</ul>
+```
 #### index 페이지, Login 및 회원가입 페이지 
 ![front1](https://user-images.githubusercontent.com/77142806/130345353-dcf90fd6-6325-4c22-bfc9-24efd3b22eac.gif)
 #### 상품 목록, 주문 페이지
 ![front2](https://user-images.githubusercontent.com/77142806/130345564-ff0965e9-7a26-4ca2-9643-373b247c33f5.gif)
 #### 게시판 목록 페이지
+```
+<script type="text/javascript">
+	function checkForm() {
+		if(${sessionId == null}){
+			alert("로그인을 하셔야 작성 할 수 있습니다.");
+			return false;
+		}
+		//로그인이 되었다면
+		location.href="./BoardWriteForm.do?id=<%= sessionId %>";
+	}
+	
+	function loginForm() {
+		if(${sessionId == null}){
+			alert("로그인을 해야 게시글을 볼 수 있습니다.");
+			return false;
+		}
+	}
+</script>
+```
 ![front3](https://user-images.githubusercontent.com/77142806/130345571-1c26de71-e8fa-422e-b3b2-f0942a91cd36.gif)
 #### 로그인, 로그아웃 페이지
 ![front4](https://user-images.githubusercontent.com/77142806/130345885-9a623c97-2db0-4d48-bdc0-483b617b4ac8.gif)
 #### 회원 정보, 상품 등록 페이지
+```
+/* 상품 등록 유효성 검사 */
+function checkAddProduct(){
+	var productId = document.getElementById("productId");
+	var pname = document.getElementById("pname");
+	var unitPrice = document.getElementById("unitPrice");
+	var unitsInStock = document.getElementById("unitsInStock");
+	
+	//상품 ID check
+	if(!check(/^P[0-9]{4,11}$/, productId, 
+		"[상품 코드]\nP와 숫자를 조합하여 5~12자까지 입력하세요.\n" + "반드시 첫 글자는 P로 시작해주세요.")){
+			return false;
+		}
+		
+	//상품명 check
+	if(pname.value.length < 4 || pname.value.length > 12){
+		alert("[상품명]\n최소 4자에서 최대 11자까지 입력해주세요.");
+		name.select();
+		name.focus();
+		return false;
+	}
+ ```
 ![front5](https://user-images.githubusercontent.com/77142806/130346109-dd85fc23-bcb9-42ca-84f9-e6123f281261.gif)
 #### 상품 수정, 삭제 페이지
 ![front6](https://user-images.githubusercontent.com/77142806/130345881-938b247f-3ace-4df9-b317-6423097e2232.gif)
