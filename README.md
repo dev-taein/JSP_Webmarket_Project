@@ -4,10 +4,6 @@
 + 웹 사이트 개발 시 필수이자 기본
 + 실력 향상
 ------------
-목차
-(1)test1
-[test1](test1)
-------------
 # 개발 환경 및 사용한 언어
 > Front-End
 + HTML
@@ -45,6 +41,7 @@
 ![github4](https://user-images.githubusercontent.com/77142806/114081914-1f4e6c80-98e8-11eb-9cab-6e90e503b431.PNG)
 ------------
 # Front-End 작동 화면 미리 보기
+------------
 #### 상단 헤더 메뉴바 기능
 > 일반 사용자가 로그인 했을 경우와 어드민 관리자 계정으로 로그인 했을 경우 상단에 상품 등록, 수정, 삭제 메뉴를 추가함(JSTL태그)
 + 관리자 계정 
@@ -77,7 +74,7 @@
 </c:choose>
 <li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/BoardListAction.do?pageNum=1">게시판</a></li>
 ```
-#### index 페이지, Login 및 회원가입 페이지 
+#### index 페이지, Login 및 회원가입 페이지
 ![front1](https://user-images.githubusercontent.com/77142806/130345353-dcf90fd6-6325-4c22-bfc9-24efd3b22eac.gif)
 #### 상품 목록, 주문 페이지
 ![front2](https://user-images.githubusercontent.com/77142806/130345564-ff0965e9-7a26-4ca2-9643-373b247c33f5.gif)
@@ -102,7 +99,7 @@
 	}
 </script>
 ```
-![front3](https://user-images.githubusercontent.com/77142806/130345571-1c26de71-e8fa-422e-b3b2-f0942a91cd36.gif)
+![front3](https://user-images.githubusercontent.com/77142806/130345571-1c26de71-e8fa-422e-b3b2-f0942a91cd36.gif)  
 #### 로그인, 로그아웃 페이지
 ![front4](https://user-images.githubusercontent.com/77142806/130345885-9a623c97-2db0-4d48-bdc0-483b617b4ac8.gif)
 #### 회원 정보, 상품 등록 페이지
@@ -137,7 +134,7 @@ function checkAddProduct(){
 ------------
 # Back-End 기능
 ------------
-#### 상품 등록
+> 상품 등록  
 ![상품등록](https://user-images.githubusercontent.com/77142806/130356397-9fcaa448-ff7f-4e94-9bf9-ad4e071fdaac.gif)
 #### 상품 주문
 ![상품주문](https://user-images.githubusercontent.com/77142806/130356394-f3a1d409-c420-467f-b10b-8bd5f170f4d3.gif)
@@ -146,11 +143,13 @@ function checkAddProduct(){
 #### 상품 삭제
 ![상품삭제](https://user-images.githubusercontent.com/77142806/130356399-cf113c26-743a-4c99-9fbb-b2cdb33ac3ee.gif)
 
-
 ------------
 # 주요 이슈
 ------------
 # 느낀점
+MVC패턴을 적용하기가 스프링프레임워크에 비해 어렵다. 파라미터 값을 클라이언트 에서 받아야합니다.
+하지만 스프링 프레임워크를 이용할 시 프로그램의 전반적인 환경을 구축하는데 굉장히 편리합니다.
+JSP는 웹 페이지 영역 안에서 환경을 구성하는 느낌이 굉장히 강했지만 간단한 웹사이트를 구축하기엔 괜찮다고 생각했습니다.
 ------------
 
  
