@@ -43,7 +43,9 @@
 # Front-End 작동 화면 미리 보기
 #### 상단 헤더 메뉴바 기능
 > 일반 사용자가 로그인 했을 경우와 어드민 관리자 계정으로 로그인 했을 경우 상단에 상품 등록, 수정, 삭제 메뉴를 추가함 (JSTL태그 라이브러리 사용)
++ 관리자 계정 
 ![menu1](https://user-images.githubusercontent.com/77142806/130346429-61d7eb0b-e512-41c8-8361-f0c811937a42.PNG)
++ 일반 사용자 계정
 ![menu2](https://user-images.githubusercontent.com/77142806/130346430-b8d036d8-6553-4eee-bac3-8a032b8b0078.PNG)
 ```
 <c:choose>
