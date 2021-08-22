@@ -41,6 +41,7 @@
 ![github4](https://user-images.githubusercontent.com/77142806/114081914-1f4e6c80-98e8-11eb-9cab-6e90e503b431.PNG)
 ------------
 # Front-End 작동 화면 미리 보기
+![front1](https://user-images.githubusercontent.com/77142806/130345353-dcf90fd6-6325-4c22-bfc9-24efd3b22eac.gif)
 
 ------------
 # Back-End 기능
