@@ -1,3 +1,5 @@
+<div align="center">
+
 # JSP_Webmarket_Project (1인)
 ## 목적 ##
 + 신입 개발자 기본
@@ -42,3 +44,6 @@
 ![github4](https://user-images.githubusercontent.com/77142806/114081914-1f4e6c80-98e8-11eb-9cab-6e90e503b431.PNG)
 ![github5](https://user-images.githubusercontent.com/77142806/114081915-1fe70300-98e8-11eb-91ba-3ecb507d8135.PNG)
 ![github6](https://user-images.githubusercontent.com/77142806/114081907-1d84a900-98e8-11eb-950f-0e8485008aa3.PNG)
+  
+ 
+</div>
