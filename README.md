@@ -47,6 +47,14 @@
 ![front2](https://user-images.githubusercontent.com/77142806/130345564-ff0965e9-7a26-4ca2-9643-373b247c33f5.gif)
 #### 게시판 목록 페이지
 ![front3](https://user-images.githubusercontent.com/77142806/130345571-1c26de71-e8fa-422e-b3b2-f0942a91cd36.gif)
+#### 로그인, 로그아웃 페이지
+![front4](https://user-images.githubusercontent.com/77142806/130345885-9a623c97-2db0-4d48-bdc0-483b617b4ac8.gif)
+#### 회원 정보, 상품 등록 페이지
+![front5](https://user-images.githubusercontent.com/77142806/130346109-dd85fc23-bcb9-42ca-84f9-e6123f281261.gif)
+#### 상품 수정, 삭제 페이지
+![front6](https://user-images.githubusercontent.com/77142806/130345881-938b247f-3ace-4df9-b317-6423097e2232.gif)
+#### 게시글  페이지
+![front7](https://user-images.githubusercontent.com/77142806/130345882-bf8e19f7-b501-44ab-b98f-195602ee088b.gif)
 ------------
 # Back-End 기능
 ------------
