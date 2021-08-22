@@ -146,6 +146,7 @@ function checkAddProduct(){
 
 ###Board (게시판)
 #### 게시글 등록
+> Command
 ```
 public class BWriteCommand implements BCommand {
 	@Override
@@ -169,6 +170,81 @@ public class BWriteCommand implements BCommand {
 	}
 }
 
+```
+> Controller
+```
+public class BoardController extends HttpServlet {
+	private static final long serialVersionUID = 1L;
+       
+    public BoardController() {
+        super();
+    }
+
+	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doGet");
+		actionDo(request, response);
+	}
+
+	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("doPost");
+		actionDo(request, response);
+	}
+
+	private void actionDo(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		System.out.println("actionDo");
+		
+		BCommand com = null;
+		String viewPage = null;
+		
+		//getRequestURI()는 요청된 전체 uri를 가져온다.
+		String uri = request.getRequestURI();
+		System.out.println("URI : " + uri);
+		
+		//getContextPath()는 프로젝트명이 리턴된다.
+		String contextPath = request.getContextPath();
+		System.out.println("contextPath : " + contextPath);
+		
+		//직접 실행되어야할 파일의 이름을 얻어내는 것이다.
+		String command = uri.substring(contextPath.length());
+		System.out.println("command : " + command);
+		
+		response.setContentType("text/html; charset=utf-8");
+		request.setCharacterEncoding("UTF-8");
+		
+		//command패턴에 따라서 분기를 하는 코드
+		//DB에 저장되어 있는 모든 게시글을 출력하는 부분
+		if(command.equals("/BoardListAction.do")) {    
+			System.out.println("------------------------------");
+			System.out.println("/BoardListAction.do페이지 호출");
+			System.out.println("------------------------------");
+			com = new BListCommand();
+			com.execute(request, response);
+			System.out.println("BoardListAction의 execute() 실행 완료");
+			viewPage = "./board/list.jsp";
+		}
+		
+		//회원의 로그인 정보를 가져오는 부분
+		else if (command.equals("/BoardWriteForm.do")) { 
+			System.out.println("------------------------------");
+			System.out.println("/BoardWriteForm.do페이지 호출");
+			System.out.println("------------------------------");
+			com = new BWriteFormCommand();
+			com.execute(request, response);
+			System.out.println("BoardWriteForm의 execute() 실행 완료");
+			viewPage = "./board/writeForm.jsp";
+		}
+		
+		//게시글을 쓰고 db에 저장하기
+		else if (command.equals("/BoardWriteAction.do")) { 
+			System.out.println("------------------------------");
+			System.out.println("/BoardWriteAction.do페이지 호출");
+			System.out.println("------------------------------");
+			com = new BWriteCommand();
+			com.execute(request, response);
+			System.out.println("BoardWriteForm의 execute() 실행 완료");
+			viewPage = "/BoardListAction.do";
+		}
+		
 ```
 ![게시글등록](https://user-images.githubusercontent.com/77142806/130357137-fc9e96ad-463c-440a-ba14-be4a42e501cf.gif)
 #### 게시글 수정
