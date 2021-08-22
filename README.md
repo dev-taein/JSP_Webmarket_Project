@@ -134,7 +134,7 @@ function checkAddProduct(){
 ------------
 # Back-End 기능
 ------------
-> Product (상품)
+### Product (상품)
 #### 상품 등록  
 ![상품등록](https://user-images.githubusercontent.com/77142806/130356397-9fcaa448-ff7f-4e94-9bf9-ad4e071fdaac.gif)
 #### 상품 주문
@@ -144,7 +144,7 @@ function checkAddProduct(){
 #### 상품 삭제
 ![상품삭제](https://user-images.githubusercontent.com/77142806/130356399-cf113c26-743a-4c99-9fbb-b2cdb33ac3ee.gif)
 
-> Board (게시판)
+###Board (게시판)
 #### 게시글 등록
 ```
 public class BWriteCommand implements BCommand {
