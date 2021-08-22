@@ -134,7 +134,7 @@ function checkAddProduct(){
 ------------
 # Back-End 기능
 ------------
-> 상품 등록  
+#### 상품 등록  
 ![상품등록](https://user-images.githubusercontent.com/77142806/130356397-9fcaa448-ff7f-4e94-9bf9-ad4e071fdaac.gif)
 #### 상품 주문
 ![상품주문](https://user-images.githubusercontent.com/77142806/130356394-f3a1d409-c420-467f-b10b-8bd5f170f4d3.gif)
