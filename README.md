@@ -78,6 +78,7 @@
 #### 상품 목록, 주문 페이지
 ![front2](https://user-images.githubusercontent.com/77142806/130345564-ff0965e9-7a26-4ca2-9643-373b247c33f5.gif)
 #### 게시판 목록 페이지
+> 로그인을 하지 않았다면 게시글을 읽지 못하도록 설정
 ```
 <script type="text/javascript">
 	function checkForm() {
@@ -101,6 +102,7 @@
 #### 로그인, 로그아웃 페이지
 ![front4](https://user-images.githubusercontent.com/77142806/130345885-9a623c97-2db0-4d48-bdc0-483b617b4ac8.gif)
 #### 회원 정보, 상품 등록 페이지
+> 상품을 등록 유효성 검사
 ```
 /* 상품 등록 유효성 검사 */
 function checkAddProduct(){
