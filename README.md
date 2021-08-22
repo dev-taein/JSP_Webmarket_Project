@@ -132,13 +132,15 @@ function checkAddProduct(){
 ![front7](https://user-images.githubusercontent.com/77142806/130345882-bf8e19f7-b501-44ab-b98f-195602ee088b.gif)
 ------------
 # Back-End 기능
-> 상품 등록
-
-> 상품 수정
-
-> 상품 삭제
-
-> 상품 주문
+------------
+#### 상품 등록
+![상품등록](https://user-images.githubusercontent.com/77142806/130356397-9fcaa448-ff7f-4e94-9bf9-ad4e071fdaac.gif)
+#### 상품 주문
+![상품주문](https://user-images.githubusercontent.com/77142806/130356394-f3a1d409-c420-467f-b10b-8bd5f170f4d3.gif)
+#### 상품 수정
+![상품수정](https://user-images.githubusercontent.com/77142806/130356404-8154eb75-9eff-4474-8f15-729af1cf52f3.gif)
+#### 상품 삭제
+![상품삭제](https://user-images.githubusercontent.com/77142806/130356399-cf113c26-743a-4c99-9fbb-b2cdb33ac3ee.gif)
 
 
 ------------
