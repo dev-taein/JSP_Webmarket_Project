@@ -145,10 +145,14 @@ function checkAddProduct(){
 
 #### 게시글 등록
 
-#### 게시글 삭제
+![게시글등록](https://user-images.githubusercontent.com/77142806/130357137-fc9e96ad-463c-440a-ba14-be4a42e501cf.gif)
 
 #### 게시글 수정
+![게시글 수정](https://user-images.githubusercontent.com/77142806/130357134-3472afdd-1b23-4ef8-b198-0396c053c6ff.gif)
 ------------
+#### 게시글 삭제
+![게시글 삭제](https://user-images.githubusercontent.com/77142806/130357133-26204da4-3323-4db9-8b85-4fa1fdb95b0c.gif)
+
 # 주요 이슈
 ------------
 # 느낀점
