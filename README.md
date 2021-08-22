@@ -128,7 +128,7 @@ function checkAddProduct(){
 ![front5](https://user-images.githubusercontent.com/77142806/130346109-dd85fc23-bcb9-42ca-84f9-e6123f281261.gif)
 #### 상품 수정, 삭제 페이지
 ![front6](https://user-images.githubusercontent.com/77142806/130345881-938b247f-3ace-4df9-b317-6423097e2232.gif)
-#### 게시글  페이지
+#### 로그인 성공 시 게시글  읽기 페이지
 ![front7](https://user-images.githubusercontent.com/77142806/130345882-bf8e19f7-b501-44ab-b98f-195602ee088b.gif)
 ------------
 # Back-End 기능
