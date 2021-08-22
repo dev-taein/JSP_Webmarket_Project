@@ -138,7 +138,7 @@ function checkAddProduct(){
 
 > 상품 삭제
 
-> 상품 
+> 상품 주문
 
 
 ------------
