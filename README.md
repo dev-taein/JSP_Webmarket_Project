@@ -1,4 +1,4 @@
-# JSP_Webmarket_Project (1인)
+# JSP_Webmarket_Project (개인 프로젝트)
 ## 목적 ##
 + JSP 개발 경험 만들기
 + 웹 사이트 개발 시 필수이자 기본
@@ -41,11 +41,11 @@
 ![github4](https://user-images.githubusercontent.com/77142806/114081914-1f4e6c80-98e8-11eb-9cab-6e90e503b431.PNG)
 ------------
 # Front-End 작동 화면 미리 보기
-> index 페이지, Login 및 회원가입 페이지
+#### index 페이지, Login 및 회원가입 페이지 
 ![front1](https://user-images.githubusercontent.com/77142806/130345353-dcf90fd6-6325-4c22-bfc9-24efd3b22eac.gif)
-> 상품 목로, 주문 페이지
+#### 상품 목록, 주문 페이지
 ![front2](https://user-images.githubusercontent.com/77142806/130345564-ff0965e9-7a26-4ca2-9643-373b247c33f5.gif)
-> 게시판 목록 
+#### 게시판 목록 페이지
 ![front3](https://user-images.githubusercontent.com/77142806/130345571-1c26de71-e8fa-422e-b3b2-f0942a91cd36.gif)
 ------------
 # Back-End 기능
