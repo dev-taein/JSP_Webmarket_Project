@@ -132,6 +132,11 @@ function checkAddProduct(){
 ![front7](https://user-images.githubusercontent.com/77142806/130345882-bf8e19f7-b501-44ab-b98f-195602ee088b.gif)
 ------------
 # Back-End 기능
+> 상품 등록
+> 상품 수정
+> 상품 삭제
+> 
+
 ------------
 # 주요 이슈
 ------------
