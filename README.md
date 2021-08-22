@@ -42,37 +42,34 @@
 ------------
 # Front-End 작동 화면 미리 보기
 #### 상단 헤더 메뉴바 기능
-> 일반 사용자가 로그인 했을 경우와 어드민 관리자 계정으로 로그인 했을 경우 상단에 상품 등록, 수정, 삭제 메뉴를 추가함
+> 일반 사용자가 로그인 했을 경우와 어드민 관리자 계정으로 로그인 했을 경우 상단에 상품 등록, 수정, 삭제 메뉴를 추가함 (JSTL태그 라이브러리 사용)
+![menu1](https://user-images.githubusercontent.com/77142806/130346429-61d7eb0b-e512-41c8-8361-f0c811937a42.PNG)
+![menu2](https://user-images.githubusercontent.com/77142806/130346430-b8d036d8-6553-4eee-bac3-8a032b8b0078.PNG)
 ```
 <c:choose>
-					<c:when test="${empty sessionId}">
-						<li class="nav-item"><a class="nav-link" 
-						href="<c:url value="/members/loginMember.jsp" />">로그인</a></li>
-						<li class="nav-item"><a class="nav-link" 
-						href="<c:url value="/members/addMember.jsp" />">회원가입</a></li>
-					</c:when>
-					<c:otherwise>
-						<li style="padding-top: 7px; color: white"><%= sessionId %>[님]</li>
-						<li class="nav-item"><a class="nav-link" 
-						href="<c:url value="/members/logoutMember.jsp" />">로그아웃</a></li>
-						<li class="nav-item"><a class="nav-link" 
-						href="<c:url value="/members/updateMember.jsp" />">회원 수정</a></li>
-					</c:otherwise>
-				</c:choose>
+	<c:when test="${empty sessionId}">
+	<li class="nav-item"><a class="nav-link" href="<c:url value="/members/loginMember.jsp" />">로그인</a></li>
+	<li class="nav-item"><a class="nav-link" href="<c:url value="/members/addMember.jsp" />">회원가입</a></li>
+	</c:when>
+	<c:otherwise>
+		<li style="padding-top: 7px; color: white"><%= sessionId %>[님]</li>
+		<li class="nav-item"><a class="nav-link" href="<c:url value="/members/logoutMember.jsp" />">로그아웃</a></li>
+		<li class="nav-item"><a class="nav-link" href="<c:url value="/members/updateMember.jsp" />">회원 수정</a></li>
+	</c:otherwise>
+</c:choose>
 				
-				<c:choose>
-					<c:when test="${sessionId ne 'admin'}">
-						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/products.jsp" class="nav-link">상품 목록</a></li>
-					</c:when>
-					<c:otherwise>
-						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/products.jsp" class="nav-link">상품 목록</a></li>
-						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/addProduct.jsp" class="nav-link">상품 등록</a></li>
-						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/editProduct.jsp?edit=update" class="nav-link">상품 수정</a></li>
-						<li class="nav-item"><a href="${pageContext.request.contextPath}/product/editProduct.jsp?edit=delete" class="nav-link">상품 삭제</a></li>
-					</c:otherwise>
-				</c:choose>
-				<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/BoardListAction.do?pageNum=1">게시판</a></li>
-			</ul>
+<c:choose>
+	<c:when test="${sessionId ne 'admin'}">
+		<li class="nav-item"><a href="${pageContext.request.contextPath}/product/products.jsp" class="nav-link">상품 목록</a></li>
+	</c:when>
+	<c:otherwise>
+		<li class="nav-item"><a href="${pageContext.request.contextPath}/product/products.jsp" class="nav-link">상품 목록</a></li>
+		<li class="nav-item"><a href="${pageContext.request.contextPath}/product/addProduct.jsp" class="nav-link">상품 등록</a></li>
+		<li class="nav-item"><a href="${pageContext.request.contextPath}/product/editProduct.jsp?edit=update" class="nav-link">상품 수정</a></li>
+		li class="nav-item"><a href="${pageContext.request.contextPath}/product/editProduct.jsp?edit=delete" class="nav-link">상품 삭제</a></li>
+	</c:otherwise>
+</c:choose>
+<li class="nav-item"><a class="nav-link" href="${pageContext.request.contextPath}/BoardListAction.do?pageNum=1">게시판</a></li>
 ```
 #### index 페이지, Login 및 회원가입 페이지 
 ![front1](https://user-images.githubusercontent.com/77142806/130345353-dcf90fd6-6325-4c22-bfc9-24efd3b22eac.gif)
