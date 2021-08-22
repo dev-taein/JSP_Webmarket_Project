@@ -43,7 +43,10 @@
 # Front-End 작동 화면 미리 보기
 > index 페이지, Login 및 회원가입 페이지
 ![front1](https://user-images.githubusercontent.com/77142806/130345353-dcf90fd6-6325-4c22-bfc9-24efd3b22eac.gif)
-> 
+> 상품 목로, 주문 페이지
+![front2](https://user-images.githubusercontent.com/77142806/130345564-ff0965e9-7a26-4ca2-9643-373b247c33f5.gif)
+> 게시판 목록 
+![front3](https://user-images.githubusercontent.com/77142806/130345571-1c26de71-e8fa-422e-b3b2-f0942a91cd36.gif)
 ------------
 # Back-End 기능
 ------------
