@@ -134,6 +134,7 @@ function checkAddProduct(){
 ------------
 # Back-End 기능
 ------------
+> Product (상품)
 #### 상품 등록  
 ![상품등록](https://user-images.githubusercontent.com/77142806/130356397-9fcaa448-ff7f-4e94-9bf9-ad4e071fdaac.gif)
 #### 상품 주문
@@ -143,22 +144,47 @@ function checkAddProduct(){
 #### 상품 삭제
 ![상품삭제](https://user-images.githubusercontent.com/77142806/130356399-cf113c26-743a-4c99-9fbb-b2cdb33ac3ee.gif)
 
+> Board (게시판)
 #### 게시글 등록
+```
+public class BWriteCommand implements BCommand {
+	@Override
+	public void execute(HttpServletRequest request, HttpServletResponse response) {
+		BoardDAO bDao = BoardDAO.getInstance();
+		
+		BoardDTO board = new BoardDTO();
+		board.setId(request.getParameter("id"));
+		board.setName(request.getParameter("name"));
+		board.setSubject(request.getParameter("subject"));
+		board.setContent(request.getParameter("content"));
+		
+		SimpleDateFormat sFormat = new SimpleDateFormat("yyyy/MM/dd(HH:mm:ss");
+		String regist_day = sFormat.format(new Date());
+		board.setRegist_day(regist_day);
+		board.setHit(0);
+		board.setIp(request.getRemoteAddr());
+		
+		//DB에 저장하는 메서드 호출
+		bDao.insertBoard(board);
+	}
+}
 
+```
 ![게시글등록](https://user-images.githubusercontent.com/77142806/130357137-fc9e96ad-463c-440a-ba14-be4a42e501cf.gif)
-
 #### 게시글 수정
 ![게시글 수정](https://user-images.githubusercontent.com/77142806/130357134-3472afdd-1b23-4ef8-b198-0396c053c6ff.gif)
-------------
 #### 게시글 삭제
 ![게시글 삭제](https://user-images.githubusercontent.com/77142806/130357133-26204da4-3323-4db9-8b85-4fa1fdb95b0c.gif)
-
+------------
 # 주요 이슈
+* MySQL TimeZone 예외 발생 MySQL의 TimeZone시간이 한국 시간으로 설정이 되어 있지 않을 경우에 발생하는 문제입니다. Mysql의 TimeZone의 시간 값을 한국 시간으로 설정하면 됩니다.
+* 상품 등록 시 Image 업로드에 관한 예외 발생 이유는 이미지 업로드 시 이미지 저장 위치의 주소가 상대주소일 경우 발생하는 예외였습니다. 이미지 업로드 주소를 절대 주소로 수정하였습니다.
+* 제일 자주 발생한 예외는 역시 오타로 인한 예외였습니다. 제일 해결하기 쉬우면서도 제일 어려운 부분 입니다.
 ------------
 # 느낀점
 1. MVC패턴을 적용하기가 스프링프레임워크에 비해 어렵다. 파라미터 값을 클라이언트 에서 받아야합니다.
 2. 하지만 스프링 프레임워크를 이용할 시 프로그램의 전반적인 환경을 구축하는데 굉장히 편리합니다.
-3. JSP는 웹 페이지 영역 안에서 환경을 구성하는 느낌이 굉장히 강했지만 간단한 웹사이트를 구축하기엔 괜찮다고 생각했습니다.
+3. JSP는 웹 페이지 영역 안에서 환경을 구성하는 느낌이 굉장히 강했지만 간단한 웹사이트를 구축하기엔 좋다고 생각했습니다.
 ------------
 
  
